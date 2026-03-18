@@ -1,0 +1,76 @@
+[
+  {
+    "anomaly_id": "719261d7ff11",
+    "product_category": "carbonated",
+    "viscosity_range": "low",
+    "temperature_range": "warm",
+    "issue_type": "foam_overflow",
+    "conditions": {
+      "pressure_range": "60-70 PSI",
+      "timing_range": "1.5s"
+    },
+    "solution": "Reduce fill speed by 30% and lower temperature to <25\u00b0C",
+    "effectiveness": 0.95,
+    "timestamp": "2026-03-18T22:44:33.663397",
+    "upvotes": 0
+  },
+  {
+    "anomaly_id": "c2f14d30f354",
+    "product_category": "thick_liquid",
+    "viscosity_range": "high",
+    "temperature_range": "room",
+    "issue_type": "clog",
+    "conditions": {
+      "nozzle_range": "3mm"
+    },
+    "solution": "Increase nozzle diameter to 5mm or warm product to 25\u00b0C",
+    "effectiveness": 0.9,
+    "timestamp": "2026-03-18T22:44:33.664833",
+    "upvotes": 0
+  },
+  {
+    "anomaly_id": "2f26e22a65b7",
+    "product_category": "medium_liquid",
+    "viscosity_range": "medium",
+    "temperature_range": "room",
+    "issue_type": "drift",
+    "conditions": {
+      "pressure_range": "50-60 PSI",
+      "timing_range": "2.0s"
+    },
+    "solution": "Implement temperature compensation - viscosity changes with temp",
+    "effectiveness": 0.85,
+    "timestamp": "2026-03-18T22:44:33.666575",
+    "upvotes": 0
+  },
+  {
+    "anomaly_id": "695010374366",
+    "product_category": "thin_liquid",
+    "viscosity_range": "low",
+    "temperature_range": "room",
+    "issue_type": "underfill",
+    "conditions": {
+      "pressure_range": "30-40 PSI",
+      "timing_range": "1.0s"
+    },
+    "solution": "Increase pressure to 45 PSI or extend timing to 1.5s",
+    "effectiveness": 0.98,
+    "timestamp": "2026-03-18T22:44:33.667912",
+    "upvotes": 0
+  },
+  {
+    "anomaly_id": "9448ebf721f2",
+    "product_category": "thick_liquid",
+    "viscosity_range": "high",
+    "temperature_range": "warm",
+    "issue_type": "overfill",
+    "conditions": {
+      "pressure_range": "70-80 PSI",
+      "timing_range": "2.5s"
+    },
+    "solution": "Reduce pressure to 55 PSI - liquid warmed up and flows faster",
+    "effectiveness": 0.92,
+    "timestamp": "2026-03-18T22:44:33.669234",
+    "upvotes": 0
+  }
+]

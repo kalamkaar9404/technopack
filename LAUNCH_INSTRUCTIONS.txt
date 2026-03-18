@@ -1,0 +1,250 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║              PINNs-UPC CALIBRATION SYSTEM                                ║
+║              Complete Launch Instructions                                ║
+║              Technopack Hackathon 2026                                   ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+
+═══════════════════════════════════════════════════════════════════════════
+  STEP 1: VERIFY PREREQUISITES
+═══════════════════════════════════════════════════════════════════════════
+
+Open terminal and run:
+
+    python --version
+    → Should show: Python 3.9.x or higher ✓
+
+    node --version
+    → Should show: v18.x.x or higher ✓
+
+If not installed, download from:
+    Python: https://www.python.org/downloads/
+    Node.js: https://nodejs.org/
+
+
+═══════════════════════════════════════════════════════════════════════════
+  STEP 2: INSTALL DEPENDENCIES (First Time Only)
+═══════════════════════════════════════════════════════════════════════════
+
+Run these commands in order:
+
+    1. Install Python packages:
+       pip install -r requirements.txt
+       ⏱ Takes 2-5 minutes
+
+    2. Install Node.js packages:
+       npm install
+       ⏱ Takes 3-7 minutes
+
+    3. Initialize system:
+       python setup.py
+       ⏱ Takes 5-10 minutes (trains AI model)
+
+
+═══════════════════════════════════════════════════════════════════════════
+  STEP 3: LAUNCH APPLICATION
+═══════════════════════════════════════════════════════════════════════════
+
+OPTION A - Automated (Recommended):
+────────────────────────────────────
+
+    Windows:
+        Double-click: start.bat
+        Or run: start.bat
+
+    Linux/Mac:
+        chmod +x start.sh
+        ./start.sh
+
+    → Opens 2 terminal windows automatically
+    → Backend starts on port 8000
+    → Frontend starts on port 3000
+
+
+OPTION B - Manual:
+──────────────────
+
+    Terminal 1 - Backend:
+        python api/main.py
+        → Wait for "✓ Backend initialized successfully"
+
+    Terminal 2 - Frontend:
+        npm run dev
+        → Wait for "✓ Ready in X.Xs"
+
+
+═══════════════════════════════════════════════════════════════════════════
+  STEP 4: ACCESS APPLICATION
+═══════════════════════════════════════════════════════════════════════════
+
+Open your browser and go to:
+
+    Frontend (Main UI):
+    → http://localhost:3000
+
+    Backend API:
+    → http://localhost:8000
+
+    API Documentation:
+    → http://localhost:8000/docs
+
+
+═══════════════════════════════════════════════════════════════════════════
+  STEP 5: VERIFY EVERYTHING WORKS
+═══════════════════════════════════════════════════════════════════════════
+
+Run integration test:
+
+    python test_integration.py
+
+Expected result:
+    ✓ All tests passed! Integration is working correctly.
+    Passed: 8/8
+
+
+═══════════════════════════════════════════════════════════════════════════
+  STEP 6: TRY IT OUT
+═══════════════════════════════════════════════════════════════════════════
+
+1. Open: http://localhost:3000
+
+2. Click "Scanner" in sidebar
+
+3. Enter UPC code: 1234567890002
+
+4. Click "Scan" button
+
+5. See product information load ✓
+
+6. Click "Start Fill Operation"
+
+7. Adjust parameters and click "Predict Fill"
+
+8. Enter actual values and click "Log Fill Result"
+
+9. Success! 🎉
+
+
+═══════════════════════════════════════════════════════════════════════════
+  SAMPLE UPC CODES TO TRY
+═══════════════════════════════════════════════════════════════════════════
+
+    1234567890001  →  Water (thin liquid)
+    1234567890002  →  Vegetable Oil (medium viscosity)
+    1234567890003  →  Honey (thick liquid)
+    1234567890004  →  Milk
+    1234567890005  →  Soda (carbonated)
+
+
+═══════════════════════════════════════════════════════════════════════════
+  TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════════
+
+Problem: Backend won't start
+Solution:
+    pip install --upgrade -r requirements.txt
+    python setup.py
+
+Problem: Frontend won't start
+Solution:
+    rm -rf node_modules .next
+    npm install
+
+Problem: Port already in use
+Solution:
+    # Kill process on port 8000 or 3000
+    # Windows: taskkill /F /IM python.exe
+    # Linux/Mac: lsof -ti:8000 | xargs kill -9
+
+Problem: CORS errors
+Solution:
+    # Check .env.local file exists with:
+    NEXT_PUBLIC_API_URL=http://localhost:8000
+
+Problem: Database not found
+Solution:
+    python setup.py
+
+
+═══════════════════════════════════════════════════════════════════════════
+  STOPPING THE APPLICATION
+═══════════════════════════════════════════════════════════════════════════
+
+    Press Ctrl+C in both terminal windows
+
+    Or close the terminal windows
+
+
+═══════════════════════════════════════════════════════════════════════════
+  DOCUMENTATION
+═══════════════════════════════════════════════════════════════════════════
+
+    Complete Setup Guide:     COMPLETE_SETUP_GUIDE.md
+    Quick Start (5 min):      QUICK_START.md
+    Integration Details:      FULLSTACK_INTEGRATION.md
+    API Reference:            http://localhost:8000/docs
+    Troubleshooting:          DEPLOYMENT_CHECKLIST.md
+
+
+═══════════════════════════════════════════════════════════════════════════
+  SUPPORT
+═══════════════════════════════════════════════════════════════════════════
+
+    If you encounter issues:
+
+    1. Check terminal output for error messages
+    2. Review COMPLETE_SETUP_GUIDE.md
+    3. Run: python test_integration.py
+    4. Check browser console (F12) for frontend errors
+    5. Verify all prerequisites are installed
+
+
+═══════════════════════════════════════════════════════════════════════════
+  SUCCESS CHECKLIST
+═══════════════════════════════════════════════════════════════════════════
+
+    ☐ Python 3.9+ installed
+    ☐ Node.js 18+ installed
+    ☐ Dependencies installed (pip + npm)
+    ☐ System initialized (python setup.py)
+    ☐ Backend running (port 8000)
+    ☐ Frontend running (port 3000)
+    ☐ Can access http://localhost:3000
+    ☐ Can access http://localhost:8000/docs
+    ☐ Integration test passes (8/8)
+    ☐ Can scan UPC code
+    ☐ Can predict fill
+    ☐ Can execute fill
+    ☐ All features working
+
+
+═══════════════════════════════════════════════════════════════════════════
+  YOU'RE READY! 🚀
+═══════════════════════════════════════════════════════════════════════════
+
+    Your PINNs-UPC Calibration System is now running!
+
+    Frontend:  http://localhost:3000
+    Backend:   http://localhost:8000
+    API Docs:  http://localhost:8000/docs
+
+    Good luck with your hackathon! 🎉
+
+
+═══════════════════════════════════════════════════════════════════════════
+  HACKATHON INFO
+═══════════════════════════════════════════════════════════════════════════
+
+    Event:     Technopack Hackathon 2026
+    Deadline:  Mar 19, 2026 @ 2:30am GMT+5:30
+    Prize:     $10,000
+    Judging:   Creativity
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║                    END OF LAUNCH INSTRUCTIONS                            ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝

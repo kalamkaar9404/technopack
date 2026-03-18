@@ -1,0 +1,36 @@
+database:
+  path: "./data/calibration.db"
+  
+model:
+  architecture:
+    hidden_layers: 6
+    neurons_per_layer: 32
+    activation: "tanh"
+  training:
+    epochs: 1000
+    learning_rate: 0.001
+    physics_weight_ns: 0.5
+    physics_weight_continuity: 0.5
+  paths:
+    model_dir: "./models"
+    active_model: "pinn_v1.pth"
+    
+calibration:
+  parameter_ranges:
+    valve_timing: [0.1, 5.0]
+    pressure: [10.0, 100.0]
+    nozzle_diameter: [2.0, 10.0]
+  optimization:
+    grid_resolution: 10
+    max_iterations: 100
+    convergence_tolerance: 0.001
+    
+thresholds:
+  acceptable_accuracy: 1.0  # percent
+  prediction_warning: 2.0   # percent
+  anomaly_detection: 3.0    # percent
+  retraining_trigger: 50    # new samples
+  
+ui:
+  port: 8501
+  refresh_rate: 1.0  # seconds
