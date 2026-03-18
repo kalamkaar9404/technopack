@@ -1,69 +1,6 @@
 # CalibratePro: Preventing Inaccurate Fills
 ## How We Solve Liquid Filling System Calibration
 
----
-
-## 🚀 Quick Start
-
-### Tech Stack
-
-**Frontend:**
-- Next.js 16 + React 19 + TypeScript
-- Tailwind CSS + Radix UI
-- Recharts for visualizations
-- jsPDF for report generation
-
-**Backend:**
-- Python 3.13 + FastAPI
-- PyTorch for PINN model
-- SQLAlchemy + SQLite
-- OpenCV for computer vision
-
-### Run Locally
-
-**Prerequisites:**
-- Node.js 18+ and npm
-- Python 3.13+
-
-**Install dependencies:**
-```bash
-npm install
-pip install -r requirements.txt
-```
-
-**Start the application:**
-```bash
-# Start both frontend and backend
-.\start.bat
-
-# Or start separately:
-# Frontend: npm run dev
-# Backend: uvicorn api.main:app --reload
-```
-
-**Access the application:**
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Docs: http://localhost:8000/docs
-
-**Test UPC codes:**
-- `012345678901` - Premium Fill Container
-- `012345678902` - Standard Fill Container
-
-### Build
-
-```bash
-npm run build
-```
-
-### Optional: Verify Python modules
-
-```bash
-python -m py_compile src/models/pinn_model.py
-python -m py_compile src/database/database_layer.py
-```
-
----
 
 ## 🎯 Our Core Solution: PINNs + UPC Database
 
@@ -163,6 +100,69 @@ The challenge has multiple failure points - wrong data, wrong settings, equipmen
 2. Create new project from GitHub repo
 3. Railway auto-detects Python and uses `Procfile`
 4. Get your backend URL and update Vercel environment variable
+
+---
+---
+
+## 🚀 Quick Start
+
+### Tech Stack
+
+**Frontend:**
+- Next.js 16 + React 19 + TypeScript
+- Tailwind CSS + Radix UI
+- Recharts for visualizations
+- jsPDF for report generation
+
+**Backend:**
+- Python 3.13 + FastAPI
+- PyTorch for PINN model
+- SQLAlchemy + SQLite
+- OpenCV for computer vision
+
+### Run Locally
+
+**Prerequisites:**
+- Node.js 18+ and npm
+- Python 3.13+
+
+**Install dependencies:**
+```bash
+npm install
+pip install -r requirements.txt
+```
+
+**Start the application:**
+```bash
+# Start both frontend and backend
+.\start.bat
+
+# Or start separately:
+# Frontend: npm run dev
+# Backend: uvicorn api.main:app --reload
+```
+
+**Access the application:**
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8000
+- API Docs: http://localhost:8000/docs
+
+**Test UPC codes:**
+- `012345678901` - Premium Fill Container
+- `012345678902` - Standard Fill Container
+
+### Build
+
+```bash
+npm run build
+```
+
+### Optional: Verify Python modules
+
+```bash
+python -m py_compile src/models/pinn_model.py
+python -m py_compile src/database/database_layer.py
+```
 
 ---
 
