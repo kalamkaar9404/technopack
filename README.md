@@ -84,7 +84,7 @@ The challenge has multiple failure points - wrong data, wrong settings, equipmen
 
 ---
 
-## 🎤 Simple Pitch
+## What This does
 
 "Filling machines are inaccurate because workers guess settings for each liquid. We scan a barcode to get exact liquid properties, then AI that understands physics calculates perfect settings in 10 seconds. A camera watches every fill to ensure accuracy, and the system learns from mistakes. Result: 99.9% accurate fills, 50x faster setup, saving $165K per year per machine."
 
