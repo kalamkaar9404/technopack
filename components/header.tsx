@@ -101,7 +101,7 @@ export function Header() {
     <>
       <header className="fixed top-0 left-60 right-0 h-16 bg-card border-b border-border flex items-center justify-between px-6 z-40 glass-effect-strong shadow-glow animate-slide-in">
         <div className="flex items-center gap-4">
-          <h1 className="text-xl font-semibold text-foreground text-glow">PINNs-UPC Calibration System</h1>
+          <h1 className="text-xl font-semibold text-foreground text-glow">CalibratePro</h1>
         </div>
 
         <div className="flex items-center gap-6">

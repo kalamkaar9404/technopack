@@ -194,7 +194,7 @@ export default function Dashboard() {
         {/* Header with Guide Toggle */}
         <div className="flex items-start justify-between animate-slide-in">
           <div>
-            <h2 className="text-3xl font-bold text-foreground mb-2 text-glow">System Overview</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-2 text-glow">CalibratePro Dashboard</h2>
             <p className="text-foreground/60">Real-time monitoring and PINN-powered calibration</p>
           </div>
           <Button
@@ -450,7 +450,13 @@ export default function Dashboard() {
                 <YAxis type="number" dataKey="density" name="Density" stroke="var(--foreground)" label={{ value: 'Density (kg/m³)', angle: -90, position: 'left' }} />
                 <Tooltip 
                   cursor={{ strokeDasharray: '3 3' }}
-                  contentStyle={{ backgroundColor: 'var(--card)', border: '1px solid var(--border)' }}
+                  contentStyle={{ 
+                    backgroundColor: 'var(--card)', 
+                    border: '1px solid var(--border)',
+                    color: 'var(--foreground)'
+                  }}
+                  labelStyle={{ color: 'var(--foreground)' }}
+                  itemStyle={{ color: 'var(--foreground)' }}
                   formatter={(value: any, name: string) => {
                     if (name === 'accuracy') return [`${value}%`, 'Accuracy']
                     return [value, name]

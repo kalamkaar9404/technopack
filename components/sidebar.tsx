@@ -49,7 +49,7 @@ export function Sidebar() {
             <div className="w-2 h-2 rounded-full bg-success animate-pulse-glow"></div>
             <span className="text-sidebar-foreground">System Online</span>
           </div>
-          <div className="text-xs text-sidebar-foreground/60">v2.1.0</div>
+          <div className="text-xs text-sidebar-foreground/60">CalibratePro v2.1</div>
         </div>
       </div>
     </aside>

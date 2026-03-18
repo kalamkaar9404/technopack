@@ -99,7 +99,7 @@ export default function ScannerPage() {
     doc.rect(0, 0, pageWidth, 40, 'F')
     doc.setTextColor(255, 255, 255)
     doc.setFontSize(24)
-    doc.text('PINNs-UPC Calibration Report', pageWidth / 2, 20, { align: 'center' })
+    doc.text('CalibratePro - Calibration Report', pageWidth / 2, 20, { align: 'center' })
     doc.setFontSize(12)
     doc.text('Physics-Informed Neural Network Predictions', pageWidth / 2, 30, { align: 'center' })
     
@@ -250,7 +250,7 @@ export default function ScannerPage() {
     doc.setTextColor(100, 100, 100)
     doc.setFontSize(10)
     doc.text(`Generated: ${new Date().toLocaleString()}`, 14, doc.internal.pageSize.getHeight() - 10)
-    doc.text('PINNs-UPC Calibration System v2.1.0', pageWidth - 14, doc.internal.pageSize.getHeight() - 10, { align: 'right' })
+    doc.text('CalibratePro v2.1.0', pageWidth - 14, doc.internal.pageSize.getHeight() - 10, { align: 'right' })
     
     // Save PDF
     doc.save(`PINN_Report_${upcCode}_${Date.now()}.pdf`)
